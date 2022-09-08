@@ -1,0 +1,52 @@
+body {
+    font-family: "Poppins", Helvetica, sans-serif;
+    background-color: #222;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+.sections {
+    width: 100%;
+    padding: 20px;
+    margin: 5% auto;
+}
+
+button {
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    padding: 0.6em 2.1em;
+    border-radius: 30px;
+    line-height: 1.2;
+    font-size: 1em;
+    border: 2px solid black;
+    transition: 0.5s;
+}
+
+/* media query */
+
+/* Extra large devices */
+@media screen and (min-width: 992px) {
+    .sections {
+        width: 80%;
+    }
+}
+
+/* Large devices */
+@media screen and (max-width: 991.98px) {
+    .sections {
+        width: 90%;
+    }
+}
+
+/* Medium devices */
+@media screen and (max-width: 767.98px) {
+    .sections {
+        padding: 20px 50px;
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 575.98px) {}
