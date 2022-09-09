@@ -1,0 +1,62 @@
+/* CSS for skill section */
+
+/* .skill-section {
+    background-color: #3d4245;
+} */
+
+.skills {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.skill {
+    display: flex;
+    flex: 50%;
+}
+
+.skill>img {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.skill-description {
+    padding: 0 20px;
+}
+
+.skill-name {
+    margin: 7px 0;
+}
+
+/* media query */
+
+/* Extra large devices */
+@media screen and (min-width: 992px) {}
+
+/* Large devices */
+@media screen and (max-width: 991.98px) {}
+
+/* Medium devices */
+@media screen and (max-width: 767.98px) {
+    .skills {
+        flex-direction: column;
+    }
+
+    .skill {
+        margin-bottom: 20px;
+    }
+
+    .skill:last-child {
+        margin-bottom: 0;
+    }
+
+    .skill>img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 575.98px) {}

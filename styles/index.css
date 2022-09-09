@@ -1,16 +1,19 @@
 body {
     font-family: "Poppins", Helvetica, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #222;
     color: #fff;
     font-size: 16px;
+    margin: 0;
 }
-
-/* asdda */
-
 
 .sections {
     width: 100%;
     padding: 20px;
+}
+
+.wrapper {
     margin: 5% auto;
 }
 
@@ -31,14 +34,14 @@ button {
 
 /* Extra large devices */
 @media screen and (min-width: 992px) {
-    .sections {
+    .wrapper {
         width: 80%;
     }
 }
 
 /* Large devices */
 @media screen and (max-width: 991.98px) {
-    .sections {
+    .wrapper {
         width: 90%;
     }
 }
@@ -51,4 +54,8 @@ button {
 }
 
 /* Small devices */
-@media screen and (max-width: 575.98px) {}
+@media screen and (max-width: 575.98px) {
+    .sections {
+        padding: 20px 30px;
+    }
+}

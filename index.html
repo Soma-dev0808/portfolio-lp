@@ -9,50 +9,59 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="./intro.css">
-    <link rel="stylesheet" href="./skill.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/intro.css">
+    <link rel="stylesheet" href="./styles/skill.css">
+    <link rel="stylesheet" href="./styles/portfolio.css">
 
 </head>
 
 <body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <!-- Navbar section -->
+        </nav>
+    </header>
     <article>
-        <!-- Header -->
-        <header>
-            <nav>
-                <!-- Navbar section -->
-            </nav>
-        </header>
-
         <!-- Introduction section -->
-        <section class="sections">
-            <div class="intro-container">
-                <div class="intro-left-side">
-                    <div class="profile-img-container">
-                        <div class="plofile-img">
+        <section class="sections intro-section">
+            <div class="wrapper">
+                <div class="intro-container">
+                    <div class="intro-left-side">
+                        <div class="profile-img-container">
+                            <div class="plofile-img">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="intro-right-side">
-                    <div class="my-title"> Frontend-developer </div>
-                    <h1 class="my-name"> Soma Ikeda </h1>
+                    <div class="intro-right-side">
+                        <div class="my-title"> Frontend-developer </div>
+                        <h1 class="my-name"> Soma Ikeda </h1>
 
-                    <!-- ここに自分の自己紹介を入れる -->
-                    <p class="my-description">
-                        Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non condimentum
-                        gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet lacinia
-                        urna, a placerat sapien pretium eu.
-                    </p>
-                    <div class="my-buttons">
-                        <button class="button-portfolio">Portfolio</button>
-                        <button class="button-contact">Conatct</button>
+                        <!-- ここに自分の自己紹介を入れる -->
+                        <p class="my-description">
+                            Fusce tempor magna mi, non egestas velit ultricies nec. Aenean convallis, risus non
+                            condimentum
+                            gravida, odio mauris ullamcorper felis, ut venenatis purus ex eu mi. Quisque imperdiet
+                            lacinia
+                            urna, a placerat sapien pretium eu.
+                        </p>
+                        <div class="my-buttons">
+                            <div>
+                                <button class="button-portfolio">Portfolio</button>
+                                <button class="button-contact">Conatct</button>
+                            </div>
 
-                        <div class="sns-icons">
-                            <img src="./linkedin.png" alt="linkedin icon">
-                            <img src="./github.png" alt="github icon">
+                            <div class="sns-icons">
+                                <a href="https://www.linkedin.com/in/soma-ikeda-99b9741b6" target="_blank">
+                                    <img src="./assets/linkedin.png" alt="linkedin icon">
+                                </a>
+
+                                <a href="https://github.com/Soma-dev0808" target="_blank">
+                                    <img src="./assets/github.png" alt="github icon">
+                                </a>
+                            </div>
                         </div>
-
-                        <!-- Add dammy -->
                     </div>
                 </div>
             </div>
@@ -60,77 +69,99 @@
 
         <!-- Skills section -->
         <section class="sections">
-            <h2>Skills</h2>
-
-            <div class="skills">
-                <!-- Skill1 -->
-                <div class="skill">
-                    <img src="./github.png" alt="reactjs logo">
-                    <div>
-                        <h4 class="skill-name"> React.js</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
-                            Consectetur
-                            quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
-                            distinctio doloribus? Quia, totam?
-                        </p>
+            <div class="wrapper">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <!-- Skill1 -->
+                    <div class="skill">
+                        <img src="./assets/reactjs.png" alt="reactjs logo">
+                        <div class="skill-description">
+                            <h4 class="skill-name"> React.js(ts)</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
+                                Consectetur
+                                quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
+                                distinctio doloribus? Quia, totam?
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Skill2 -->
-                <div class="skill">
-                    <img src="./github.png" alt="nextjs logo">
-                    <div>
-                        <h4 class="skill-name">Next.js</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
-                            Consectetur
-                            quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
-                            distinctio doloribus? Quia, totam?
-                        </p>
+                    <!-- Skill2 -->
+                    <div class="skill">
+                        <img src="./assets/nextjs.png" alt="nextjs logo">
+                        <div class="skill-description">
+                            <h4 class="skill-name">Next.js</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
+                                Consectetur
+                                quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
+                                distinctio doloribus? Quia, totam?
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="skills">
-                <!-- Skill3 -->
-                <div class="skill">
-                    <img src="./github.png" alt="nodejs logo">
-                    <div>
-                        <h4 class="skill-name">Node.js</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
-                            Consectetur
-                            quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
-                            distinctio doloribus? Quia, totam?
-                        </p>
+                    <!-- Skill3 -->
+                    <div class="skill">
+                        <img src="./assets/nodejs.png" alt="nodejs logo">
+                        <div class="skill-description">
+                            <h4 class="skill-name">Node.js</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
+                                Consectetur
+                                quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
+                                distinctio doloribus? Quia, totam?
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Skill4 -->
-                <div class="skill">
-                    <img src="./github.png" alt="php logo">
-                    <div>
-                        <h4 class="skill-name">PHP</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
-                            Consectetur
-                            quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
-                            distinctio doloribus? Quia, totam?
-                        </p>
+                    <!-- Skill4 -->
+                    <div class="skill">
+                        <img src="./assets/php.png" alt="php logo">
+                        <div class="skill-description">
+                            <h4 class="skill-name">PHP</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim ad iusto ipsa.
+                                Consectetur
+                                quas eligendi, iure cupiditate nam, consequatur placeat nisi ipsa blanditiis vero quis,
+                                distinctio doloribus? Quia, totam?
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Portfolio senction -->
         <section class="sections">
-            <!-- Portfolio senction -->
+            <div class="wrapper">
+                <h2>Portfolio</h2>
+
+                <div class="portfolios">
+                    <!-- Portfolio 1 -->
+                    <div class="portfolio"></div>
+
+
+                    <!-- Portfolio 2 -->
+                    <div class="portfolio"></div>
+
+
+                    <!-- Portfolio 3 -->
+                    <div class="portfolio"></div>
+                </div>
+            </div>
         </section>
 
+        <!-- Contact section -->
         <section class="sections">
-            <!-- Contact section -->
+            <div class="wrapper">
+                <h2>Contact</h2>
+            </div>
         </section>
     </article>
+    <!-- footer section -->
+    <footer>
+        footer here
+    </footer>
 </body>
 
 </html>
