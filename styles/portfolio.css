@@ -1,5 +1,40 @@
 /* CSS for portfolio section */
 
-.portfolios {}
+.portfolios {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.portfolio {}
+.portfolio {
+    border-bottom: 1px solid rgb(53, 53, 53);
+    padding: 20px;
+}
+
+.portfolio>img {
+    width: 100%;
+}
+
+/* media query */
+
+/* Extra large devices */
+@media screen and (min-width: 992px) {
+    .portfolio {
+        width: 70%
+    }
+}
+
+/* Large devices */
+@media screen and (max-width: 991.98px) {
+    .portfolio {
+        width: 80%
+    }
+}
+
+/* Medium devices */
+@media screen and (max-width: 767.98px) {}
+
+/* Small devices */
+@media screen and (max-width: 575.98px) {}
