@@ -13,6 +13,7 @@
 .skill {
     display: flex;
     flex: 50%;
+    z-index: 1;
 }
 
 .skill>img {

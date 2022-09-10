@@ -11,6 +11,7 @@
 .portfolio {
     border-bottom: 1px solid rgb(53, 53, 53);
     padding: 20px;
+    z-index: 1;
 }
 
 .portfolio>img {
