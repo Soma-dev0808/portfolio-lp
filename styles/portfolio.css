@@ -14,8 +14,27 @@
     z-index: 1;
 }
 
+.portfolio p {
+    color: #d5d5d5
+}
+
+.portfolio-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.portfolio-link:hover {
+    text-decoration: underline;
+}
+
 .portfolio>img {
     width: 100%;
+}
+
+.portfolio-gif {
+    display: block;
+    margin: auto;
+    width: 80%;
 }
 
 /* media query */
@@ -31,6 +50,10 @@
 @media screen and (max-width: 991.98px) {
     .portfolio {
         width: 80%
+    }
+
+    .portfolio-gif {
+        width: 100%;
     }
 }
 

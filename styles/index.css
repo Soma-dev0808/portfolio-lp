@@ -56,6 +56,10 @@ button {
     transition: 0.5s;
 }
 
+.link-icon {
+    width: 13px;
+}
+
 /* media query */
 
 /* Extra large devices */
