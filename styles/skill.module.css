@@ -1,9 +1,5 @@
 /* CSS for skill section */
 
-/* .skill-section {
-    background-color: #3d4245;
-} */
-
 .skills {
     display: flex;
     box-sizing: border-box;
@@ -12,25 +8,19 @@
 
 .skill {
     display: flex;
-    flex: 50%;
+    width: 50%;
     z-index: 1;
 }
 
-.skill>img {
-    width: 70px;
-    height: 70px;
-    margin-right: 20px;
-}
-
-.skill-description {
+.skillDescription {
     padding: 0 20px;
 }
 
-.skill-description>p {
+.skillDescription>p {
     color: #d5d5d5;
 }
 
-.skill-name {
+.skillName {
     margin: 7px 0;
 }
 
@@ -49,6 +39,7 @@
     }
 
     .skill {
+        width: 100%;
         margin-bottom: 20px;
     }
 
@@ -56,10 +47,9 @@
         margin-bottom: 0;
     }
 
-    .skill>img {
-        width: 60px;
-        height: 60px;
-        margin-right: 10px;
+    .langImage span {
+        width: 60px !important;
+        height: 60px !important;
     }
 }
 

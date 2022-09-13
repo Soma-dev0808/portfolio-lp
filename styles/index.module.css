@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: "Poppins", Helvetica, sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
@@ -6,7 +6,7 @@ body {
     color: #fff;
     font-size: 16px;
     margin: 0;
-}
+} */
 
 .sections {
     padding: 20px;
@@ -16,14 +16,14 @@ body {
     margin: 5% auto;
 }
 
-.section-title {
+.sectionTitle {
     display: inline-block;
     position: relative;
     font-size: 21px;
     padding-bottom: 7px;
 }
 
-.section-title::before {
+.sectionTitle::before {
     background-color: #353535;
     display: block;
     position: absolute;
@@ -33,7 +33,7 @@ body {
     bottom: 0;
 }
 
-.section-title::after {
+.sectionTitle::after {
     background-color: #0a9b94;
     display: block;
     position: absolute;
@@ -43,7 +43,7 @@ body {
     bottom: 0;
 }
 
-button {
+.button {
     cursor: pointer;
     color: #fff;
     background-color: #333;
@@ -54,10 +54,6 @@ button {
     font-size: 1em;
     border: 2px solid black;
     transition: 0.5s;
-}
-
-.link-icon {
-    width: 13px;
 }
 
 /* media query */

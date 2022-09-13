@@ -1,13 +1,13 @@
 /* CSS for intro section */
-.image-background {
-    background-image: url('../assets/night_sky.jpg');
+.imageBackground {
+    background-image: url('../public/assets/night_sky.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     background-attachment: fixed;
 }
 
-.image-background::before {
+.imageBackground::before {
     content: '';
     background-color: rgba(0, 0, 0, .5);
     position: absolute;
@@ -17,30 +17,30 @@
     bottom: 0;
 }
 
-.intro-container {
+.introContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.intro-left-side,
-.intro-right-side {
+.introLeftSide,
+.introRightSide {
     z-index: 1;
     padding: 0 20px;
 }
 
-.intro-left-side {
-    width: 35%;
+.introLeftSide {
+    width: 40%;
 }
 
-.intro-right-side {
+.introRightSide {
     width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.profile-img-container {
+.profileImgContainer {
     background-color: #444;
     border: 11px solid #444;
     box-shadow: 0 0 25px 0 rgb(0 0 0 / 80%);
@@ -51,8 +51,8 @@
     overflow: hidden;
 }
 
-.plofile-img {
-    background-image: url("../assets/profile.JPG");
+.plofileImg {
+    background-image: url("../public/assets/profile.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
@@ -67,56 +67,54 @@
     background-position-y: 34%;
 }
 
-.my-title {
+.myTitle {
     color: #aaa;
 }
 
-.my-name {
+.myName {
     font-size: 48px;
     line-height: 56px;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
-.my-buttons {
+.myButtons {
     margin-top: 20px;
     display: flex;
 }
 
-.my-description {
+.myDescription {
     color: #d5d5d5;
     font-size: 14px;
     line-height: 1.75em;
 }
 
-.button-portfolio {
+.buttonPortfolio {
     border-color: #0a9b94;
     margin-right: 10px;
 }
 
-.button-portfolio:hover {
+.buttonPortfolio:hover {
     background-color: #0a9b94;
 }
 
-.button-contact {
+.buttonContact {
     border-color: #D5D5D5;
 }
 
-.button-contact:hover {
+.buttonContact:hover {
     background-color: #D5D5D5;
     color: #333;
 }
 
-.sns-icons {
+.snsIcons {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 20px;
 }
 
-.sns-icons>a>img {
-    width: 25px;
-    height: 25px;
+.snsIcons>a {
     margin: 0 5px;
 }
 
@@ -130,39 +128,39 @@
 
 /* Medium devices */
 @media screen and (max-width: 767.98px) {
-    .intro-container {
+    .introContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .intro-left-side {
+    .introLeftSide {
         width: 55%;
     }
 
-    .my-title {
+    .myTitle {
         margin: 20px 0;
     }
 
-    .my-name {
+    .myName {
         margin-bottom: 0;
     }
 
-    .my-buttons {
+    .myButtons {
         flex-direction: column;
     }
 
-    .sns-icons {
+    .snsIcons {
         margin: 20px 0 0 0;
         justify-content: center;
     }
 
-    .sns-icons>img {
+    .snsIcons>a {
         margin: 0 10px;
     }
 
-    .intro-right-side {
+    .introRightSide {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -173,12 +171,17 @@
 
 /* Small devices */
 @media screen and (max-width: 575.98px) {
-    .my-name {
+    .myName {
         text-align: center;
     }
 
-    .button-portfolio,
-    .button-contact {
+    .buttonPortfolio,
+    .buttonContact {
         padding: 0.4em 1.1em;
     }
+
+    .introLeftSide {
+        width: 70%;
+    }
+
 }

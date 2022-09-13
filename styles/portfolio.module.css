@@ -18,23 +18,24 @@
     color: #d5d5d5
 }
 
-.portfolio-link {
+.portfolioLink {
     color: #fff;
     text-decoration: none;
 }
 
-.portfolio-link:hover {
+.portfolioLink:hover {
     text-decoration: underline;
 }
 
-.portfolio>img {
-    width: 100%;
+.linkIcon {
+    margin-left: 5px;
 }
 
-.portfolio-gif {
-    display: block;
-    margin: auto;
+.portfolioGifContainer {
     width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 /* media query */
@@ -52,7 +53,7 @@
         width: 80%
     }
 
-    .portfolio-gif {
+    .portfolioGifContainer {
         width: 100%;
     }
 }
@@ -61,4 +62,8 @@
 @media screen and (max-width: 767.98px) {}
 
 /* Small devices */
-@media screen and (max-width: 575.98px) {}
+@media screen and (max-width: 575.98px) {
+    .portfolio {
+        padding: 0px;
+    }
+}
