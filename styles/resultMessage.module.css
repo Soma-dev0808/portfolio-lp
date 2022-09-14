@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+    padding: 5px 20px 20px;
+    background-color: #0a9b94;
+    border-radius: 5px;
+}
+
+.messageTitle {}
+
+.message {
+    white-space: pre-line;
+}
+
+.error {
+    background-color: #ff5a5f;
+}

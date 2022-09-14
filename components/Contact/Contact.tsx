@@ -4,6 +4,7 @@ import type { APIReturnType } from '../utils/utils';
 import indexStyles from '../../styles/index.module.css'
 import contactStyles from '../../styles/contact.module.css'
 import ResultMessage from '../ResultMessage';
+import LoadingIndicator from '../LoadingIndicator';
 
 const Contact = () => {
     const [formStat, setFormStat] = useState<APIReturnType>('standby');
@@ -19,7 +20,6 @@ const Contact = () => {
     }
 
     const getContactUI = (status: APIReturnType) => {
-
         if (status === 'success' || status === 'error') {
             return <ResultMessage resultStat={status} />;
         }
@@ -74,7 +74,10 @@ const Contact = () => {
                     className={`${indexStyles.button} ${contactStyles.buttonSubmit}`}
                     disabled={isLoading}
                 >
-                    Submit
+                    {isLoading ?
+                        <LoadingIndicator />
+                        : 'Submit'
+                    }
                 </button>
             </form>
         )
