@@ -14,6 +14,17 @@
 
 .wrapper {
     margin: 5% auto;
+    animation: fadeIn 0.8s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .sectionTitle {
