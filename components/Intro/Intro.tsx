@@ -1,13 +1,13 @@
-import React from 'react'
-import Image from 'next/image'
-import indexStyles from '../../styles/index.module.css'
-import introStyles from '../../styles/intro.module.css'
-import { scrollToTargetId } from '../utils/utils'
+import React from 'react';
+import Image from 'next/image';
+import indexStyles from '../../styles/index.module.css';
+import introStyles from '../../styles/intro.module.css';
+import { scrollToTargetId } from '../utils/utils';
 
 // Introduction section
 const Intro = () => {
-    const handleScrollToPortfolios = () => scrollToTargetId('#portfolios')
-    const handleScrollToContact = () => scrollToTargetId('#contact')
+    const handleScrollToPortfolios = () => scrollToTargetId('#portfolios');
+    const handleScrollToContact = () => scrollToTargetId('#contact');
 
     return (
         <section className={`${indexStyles.sections} ${introStyles.imageBackground}`}>
@@ -42,7 +42,7 @@ const Intro = () => {
                                     className={`${indexStyles.button} ${introStyles.buttonContact}`}
                                     onClick={handleScrollToContact}
                                 >
-                                    Conatct
+                                    Contact
                                 </button>
                             </div>
 
@@ -70,7 +70,7 @@ const Intro = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Intro
+export default Intro;
