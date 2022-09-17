@@ -83,6 +83,10 @@
     display: flex;
 }
 
+.myInfoButtons {
+    display: flex;
+}
+
 .myDescription {
     color: #d5d5d5;
     font-size: 14px;
@@ -92,6 +96,7 @@
 .buttonPortfolio {
     border-color: #0a9b94;
     margin-right: 10px;
+    padding: 0.2em 1.6em;
 }
 
 .buttonPortfolio:hover {
@@ -100,9 +105,26 @@
 
 .buttonContact {
     border-color: #D5D5D5;
+    margin-right: 10px;
+    padding: 0.2em 1.6em;
+    ;
 }
 
 .buttonContact:hover {
+    background-color: #D5D5D5;
+    color: #333;
+}
+
+.buttonResume {
+    text-decoration: none;
+    border-color: #D5D5D5;
+    padding: 0.4em 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonResume:hover {
     background-color: #D5D5D5;
     color: #333;
 }
@@ -125,6 +147,17 @@
 
 /* Large devices */
 @media screen and (max-width: 991.98px) {}
+
+/* Sepecific size to sns icons */
+@media screen and (max-width: 899.98px) {
+    .myButtons {
+        flex-wrap: wrap;
+    }
+
+    .snsIcons {
+        margin: 20px 0 0 0;
+    }
+}
 
 /* Medium devices */
 @media screen and (max-width: 767.98px) {
@@ -152,7 +185,6 @@
     }
 
     .snsIcons {
-        margin: 20px 0 0 0;
         justify-content: center;
     }
 
@@ -184,4 +216,8 @@
         width: 70%;
     }
 
+    .buttonPortfolio,
+    .buttonContact {
+        margin-right: 5px;
+    }
 }

@@ -31,7 +31,7 @@ const Intro = () => {
                             Mobile development.
                         </p>
                         <div className={introStyles.myButtons}>
-                            <div>
+                            <div className={introStyles.myInfoButtons}>
                                 <button
                                     className={`${indexStyles.button} ${introStyles.buttonPortfolio}`}
                                     onClick={handleScrollToPortfolios}
@@ -44,6 +44,15 @@ const Intro = () => {
                                 >
                                     Contact
                                 </button>
+
+                                <a
+                                    href="/pdf/Soma_Ikeda_Resume.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`${indexStyles.button} ${introStyles.buttonResume}`}
+                                >
+                                    Resume
+                                </a>
                             </div>
 
                             <div className={introStyles.snsIcons}>
