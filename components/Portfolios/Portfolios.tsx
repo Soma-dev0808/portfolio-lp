@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
-import indexStyles from '../../styles/index.module.css'
-import portfolioStyles from '../../styles/portfolio.module.css'
-import introStyles from '../../styles/intro.module.css'
+import React from 'react';
+import Image from 'next/image';
+import indexStyles from '../../styles/index.module.css';
+import portfolioStyles from '../../styles/portfolio.module.css';
+import introStyles from '../../styles/intro.module.css';
 
 // Portfolio senction 
 const Portfolios = () => {
@@ -49,14 +49,13 @@ const Portfolios = () => {
                                 />
                             </div>
                         </a>
-
                     </div>
 
                     {/* Portfolio 2  */}
                     <div className={portfolioStyles.portfolio}>
-                        <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/weather-app" target="_blank" rel="noreferrer">
+                        <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/concentration/" target="_blank" rel="noreferrer">
                             <h3 className={portfolioStyles.portfolioTitle}>
-                                Weather App
+                                Concentration
                                 <span className={portfolioStyles.linkIcon}>
                                     <Image
                                         src="/assets/link_icon.png"
@@ -68,18 +67,15 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
-                            <p>This application allows a user to check the current weather, and notifies a user about
-                                the weather information by LINENotify at a specific time everyday if it&apos;s configured.
-                                To be able to receive notification, you have to register/login to this app.
-                                You can see weather information in browser by inputting zipcode without registration or
-                                login.</p>
+                            <p>A card game concentration. Within the limit time, you find all matches of 2 cards to win the game.
+                                Created by React.ts and boosted development server by Vite</p>
 
                             <div className={portfolioStyles.portfolioGifContainer}>
                                 <Image
-                                    src="/assets/weather_app.gif"
+                                    src="/assets/concentration.gif"
                                     alt="weather app"
                                     width={500}
-                                    height={500}
+                                    height={400}
                                 />
                             </div>
                         </a>
@@ -115,10 +111,43 @@ const Portfolios = () => {
                             </div>
                         </a>
                     </div>
+
+                    {/* Portfolio 4  */}
+                    <div className={portfolioStyles.portfolio}>
+                        <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/weather-app" target="_blank" rel="noreferrer">
+                            <h3 className={portfolioStyles.portfolioTitle}>
+                                Weather App
+                                <span className={portfolioStyles.linkIcon}>
+                                    <Image
+                                        src="/assets/link_icon.png"
+                                        alt="link icon"
+                                        className={indexStyles.linkIcon}
+                                        width={15}
+                                        height={15}
+                                        layout='fixed'
+                                    />
+                                </span>
+                            </h3>
+                            <p>This application allows a user to check the current weather, and notifies a user about
+                                the weather information by LINENotify at a specific time everyday if it&apos;s configured.
+                                To be able to receive notification, you have to register/login to this app.
+                                You can see weather information in browser by inputting zipcode without registration or
+                                login.</p>
+
+                            <div className={portfolioStyles.portfolioGifContainer}>
+                                <Image
+                                    src="/assets/weather_app.gif"
+                                    alt="weather app"
+                                    width={500}
+                                    height={500}
+                                />
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Portfolios
+export default Portfolios;
