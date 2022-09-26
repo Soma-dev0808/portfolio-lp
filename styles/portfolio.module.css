@@ -38,6 +38,11 @@
     margin: auto;
 }
 
+.appDesc {
+    font-size: 17px;
+    line-height: 1.6rem;
+}
+
 /* media query */
 
 /* Extra large devices */
@@ -65,5 +70,9 @@
 @media screen and (max-width: 575.98px) {
     .portfolio {
         padding: 0px;
+    }
+
+    .appDesc {
+        font-size: 15px;
     }
 }
