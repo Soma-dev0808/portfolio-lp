@@ -89,7 +89,8 @@
 
 .myDescription {
     color: #d5d5d5;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold;
     line-height: 1.75em;
 }
 
@@ -219,5 +220,9 @@
     .buttonPortfolio,
     .buttonContact {
         margin-right: 5px;
+    }
+
+    .myDescription {
+        font-size: 14px;
     }
 }

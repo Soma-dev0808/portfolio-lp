@@ -34,7 +34,7 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
-                            <p>Real time chat app allows user to communicate with other users and check realtime status
+                            <p className={portfolioStyles.appDesc}>Real time chat app allows user to communicate with other users and check realtime status
                                 of
                                 other users in the same chat room. Built with React, React-redux, Typescript, and CSS.
                                 Use
@@ -67,8 +67,10 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
-                            <p>A card game concentration. Within the limit time, you find all matches of 2 cards to win the game.
-                                Created by React.ts and boosted development server by Vite</p>
+                            <p className={portfolioStyles.appDesc}>
+                                A card game concentration. Within the limit time, you find all matches of 2 cards to win the game.
+                                Created by React.ts and boosted development server by Vite
+                            </p>
 
                             <div className={portfolioStyles.portfolioGifContainer}>
                                 <Image
@@ -97,7 +99,7 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
-                            <p>
+                            <p className={portfolioStyles.appDesc}>
                                 Spotify clone application which you can actually play a song. Created with Next.js and
                                 Tailwind css.
                             </p>
@@ -128,11 +130,13 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
-                            <p>This application allows a user to check the current weather, and notifies a user about
+                            <p className={portfolioStyles.appDesc}>
+                                This application allows a user to check the current weather, and notifies a user about
                                 the weather information by LINENotify at a specific time everyday if it&apos;s configured.
                                 To be able to receive notification, you have to register/login to this app.
                                 You can see weather information in browser by inputting zipcode without registration or
-                                login.</p>
+                                login.
+                            </p>
 
                             <div className={portfolioStyles.portfolioGifContainer}>
                                 <Image
