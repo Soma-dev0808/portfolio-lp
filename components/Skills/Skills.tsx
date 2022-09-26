@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import indexStyles from '../../styles/index.module.css'
-import skillStyles from '../../styles/skill.module.css'
+import React from 'react';
+import Image from 'next/image';
+import indexStyles from '../../styles/index.module.css';
+import skillStyles from '../../styles/skill.module.css';
 
 
 // Skills section
@@ -26,7 +26,7 @@ const Skills = () => {
                         <div className={skillStyles.skillDescription}>
                             <h4 className={skillStyles.skillName}> React.js(ts)</h4>
                             <p>
-                                In most of projects, I have used React.js, and have built web applications using className
+                                In most of projects, I have used React.js, and have built web applications using class
                                 components
                                 or functional components. Also I mainly use redux to manage states.
                                 Create custom hooks is my fun part of web developing.
@@ -100,7 +100,7 @@ const Skills = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Skills
+export default Skills;
