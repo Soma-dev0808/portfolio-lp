@@ -34,6 +34,16 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
+                        </a>
+                        <div className={portfolioStyles.skillUsedContainer}>
+                            <span className={portfolioStyles.skillUsed}>React.js</span>
+                            <span className={portfolioStyles.skillUsed}>Typescript</span>
+                            <span className={portfolioStyles.skillUsed}>Redux</span>
+                            <span className={portfolioStyles.skillUsed}>Firebase</span>
+                            <span className={portfolioStyles.skillUsed}>Node.js</span>
+                        </div>
+
+                        <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/react-typescript-chat" target="_blank" rel="noreferrer">
                             <p className={portfolioStyles.appDesc}>Real time chat app allows user to communicate with other users and check realtime status
                                 of
                                 other users in the same chat room. Built with React, React-redux, Typescript, and CSS.
@@ -67,6 +77,14 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
+                        </a>
+                        <div className={portfolioStyles.skillUsedContainer}>
+                            <span className={portfolioStyles.skillUsed}>React.js</span>
+                            <span className={portfolioStyles.skillUsed}>Typescript</span>
+                            <span className={portfolioStyles.skillUsed}>Redux</span>
+                            <span className={portfolioStyles.skillUsed}>Vite</span>
+                        </div>
+                        <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/concentration/" target="_blank" rel="noreferrer">
                             <p className={portfolioStyles.appDesc}>
                                 A card game concentration. Within the limit time, you find all matches of 2 cards to win the game.
                                 Created by React.ts and boosted development server by Vite
@@ -99,6 +117,15 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
+                        </a>
+                        <div className={portfolioStyles.skillUsedContainer}>
+                            <span className={portfolioStyles.skillUsed}>React.js</span>
+                            <span className={portfolioStyles.skillUsed}>Typescript</span>
+                            <span className={portfolioStyles.skillUsed}>Recoil</span>
+                            <span className={portfolioStyles.skillUsed}>Next.js</span>
+                            <span className={portfolioStyles.skillUsed}>Tailwindcss</span>
+                        </div>
+                        <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/spotify-clone" target="_blank" rel="noreferrer">
                             <p className={portfolioStyles.appDesc}>
                                 Spotify clone application which you can actually play a song. Created with Next.js and
                                 Tailwind css.
@@ -130,6 +157,15 @@ const Portfolios = () => {
                                     />
                                 </span>
                             </h3>
+                        </a>
+                        <div className={portfolioStyles.skillUsedContainer}>
+                            <span className={portfolioStyles.skillUsed}>React.js</span>
+                            <span className={portfolioStyles.skillUsed}>Redux</span>
+                            <span className={portfolioStyles.skillUsed}>Node.js</span>
+                            <span className={portfolioStyles.skillUsed}>Express</span>
+                        </div>
+                        <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/weather-app" target="_blank" rel="noreferrer">
+
                             <p className={portfolioStyles.appDesc}>
                                 This application allows a user to check the current weather, and notifies a user about
                                 the weather information by LINENotify at a specific time everyday if it&apos;s configured.

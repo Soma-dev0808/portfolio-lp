@@ -43,6 +43,20 @@
     line-height: 1.6rem;
 }
 
+.skillUsedContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.skillUsed {
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
 /* media query */
 
 /* Extra large devices */
