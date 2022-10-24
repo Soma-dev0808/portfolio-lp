@@ -82,6 +82,7 @@ const Portfolios = () => {
                             <span className={portfolioStyles.skillUsed}>React.js</span>
                             <span className={portfolioStyles.skillUsed}>Typescript</span>
                             <span className={portfolioStyles.skillUsed}>Redux</span>
+                            <span className={portfolioStyles.skillUsed}>Firebase</span>
                             <span className={portfolioStyles.skillUsed}>Vite</span>
                         </div>
                         <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/concentration/" target="_blank" rel="noreferrer">
