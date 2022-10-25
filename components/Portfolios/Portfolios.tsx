@@ -45,11 +45,10 @@ const Portfolios = () => {
 
                         <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/react-typescript-chat" target="_blank" rel="noreferrer">
                             <p className={portfolioStyles.appDesc}>Real time chat app allows user to communicate with other users and check realtime status
-                                of
-                                other users in the same chat room. Built with React, React-redux, Typescript, and CSS.
-                                Use
-                                Node.js for the backend, and socket.io for handling real time user status and text
-                                messaging.</p>
+                                of other users in the same chat room. You can create or choose a chat room as well.
+                                <br /> Built with React, React-redux, Typescript, and CSS.
+                                Used Node.js and socket.io for handling real time user status and text messaging.
+                            </p>
                             <div className={portfolioStyles.portfolioGifContainer}>
                                 <Image
                                     src="/assets/chat_app.gif"
@@ -88,7 +87,9 @@ const Portfolios = () => {
                         <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/concentration/" target="_blank" rel="noreferrer">
                             <p className={portfolioStyles.appDesc}>
                                 A card game concentration. Within the limit time, you find all matches of 2 cards to win the game.
-                                Created by React.ts and boosted development server by Vite
+                                You can change a difficulty and card design by clicking buttons in the header. Once you completed the game within a given time, you can post your score online to compete with other players.
+                                The score data is stored in firebase store.
+                                <br />Created by React.ts and boosted development server by Vite.
                             </p>
 
                             <div className={portfolioStyles.portfolioGifContainer}>
@@ -128,8 +129,8 @@ const Portfolios = () => {
                         </div>
                         <a className={portfolioStyles.portfolioLink} href="https://github.com/Soma-dev0808/spotify-clone" target="_blank" rel="noreferrer">
                             <p className={portfolioStyles.appDesc}>
-                                Spotify clone application which you can actually play a song. Created with Next.js and
-                                Tailwind css.
+                                Spotify clone application which you can actually play a song. Fetch data for playlist and songs from 3rd party Spotify api.
+                                <br />Created with Next.js and Tailwind css.
                             </p>
                             <div className={portfolioStyles.portfolioGifContainer}>
                                 <Image
