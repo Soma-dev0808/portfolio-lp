@@ -46,7 +46,7 @@ const Intro = () => {
                                 </button>
 
                                 <a
-                                    href="/pdf/Soma_Ikeda_Resume.pdf"
+                                    href="/pdf/Soma_Ikeda_Resume_.pdf"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={`${indexStyles.button} ${introStyles.buttonResume}`}
