@@ -1,16 +1,28 @@
 .container {
-    width: 100%;
-    padding: 5px 20px 20px;
-    background-color: #0a9b94;
-    border-radius: 5px;
+  width: 50%;
+  height: fit-content;
+  text-align: center;
+  padding: 5px 20px 20px;
+  border: solid 1px #0a9b94;
+  border-radius: var(--dfltBrdrRadius);
+  color: var(--whiteClr);
 }
 
-.messageTitle {}
+.messageTitle {
+}
 
 .message {
-    white-space: pre-line;
+  white-space: pre-line;
 }
 
 .error {
-    background-color: #ff5a5f;
+  background-color: #ff5a5f;
+}
+
+/* Medium devices */
+@media screen and (max-width: 767.98px) {
+
+  .container {
+    width: 100%;
+  }
 }
