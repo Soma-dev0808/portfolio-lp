@@ -3,10 +3,28 @@ body {
   font-family: "Poppins", Helvetica, sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #222;
-  color: #fff;
+  /* background-color: #222; */
+  color: var(--whiteClr);
   font-size: 16px;
   margin: 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  -webkit-font-smoothing: antialiased;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --whiteClr: #ccd6f6;
+  --creamClr: #d5d5d5;
+  --primaryClr: #0a9b94;
+  --dfltTxtClr: #8892b0;
+  --dfltBgClr: #0a192f;
+  --dfltCardClr: #112240;
+  --dfltCardBoxShdw: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  --dfltBrdrRadius: 5px;
 }
 
 a {

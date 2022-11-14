@@ -1,228 +1,78 @@
-/* CSS for intro section */
-.imageBackground {
-    background-image: url('../public/assets/night_sky.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-attachment: fixed;
+.introWrapper {
+  margin: 30px auto;
+  width: 80%;
 }
 
-.imageBackground::before {
-    content: '';
-    background-color: rgba(0, 0, 0, .5);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+.introSection {
+  position: relative; /*h1の中央寄せ配置の起点とするためのrelative*/
+  height: 100vh; /*高さを全画面にあわせる*/
+  background-color: #0e0d0dbf;
+  background: -moz-linear-gradient(top, #0e0d0dbf 80%, var(--dfltBgClr));
+  background: -webkit-linear-gradient(top, #0e0d0dbf 80%, var(--dfltBgClr));
+  background: linear-gradient(to bottom, #0e0d0dbf 80%, var(--dfltBgClr));
 }
 
-.introContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.videoArea {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 
-.introLeftSide,
-.introRightSide {
-    z-index: 1;
-    padding: 0 20px;
+.video {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%;
 }
 
-.introLeftSide {
-    width: 40%;
+.lpTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: var(--whiteClr);
+  text-shadow: 0 0 6px #666666e6;
+  -webkit-font-smoothing: antialiased;
 }
 
-.introRightSide {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.heading {
+  margin: 0px;
+  font-size: clamp(40px, 8vw, 80px);
 }
 
-.profileImgContainer {
-    background-color: #444;
-    border: 11px solid #444;
-    box-shadow: 0 0 25px 0 rgb(0 0 0 / 80%);
-    display: block;
-    position: relative;
-    padding-bottom: calc(100% - 20px);
-    border-radius: 1000px;
-    overflow: hidden;
+.positionTitle {
+  margin-top: 10px;
+  color: #b9c2dc;
+  line-height: 0.9;
 }
 
-.plofileImg {
-    background-image: url("../public/assets/profile.JPG");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: -18px;
-    bottom: -18px;
-    width: auto;
-    left: -18px;
-    right: -18px;
-    box-sizing: border-box;
-    background-position-y: 34%;
+.introMySelf {
+  margin: 20px 0px 0px;
+  max-width: 540px;
+  color: #d8dadd;
+  line-height: 1.5;
 }
 
-.myTitle {
-    color: #aaa;
+.checkMeButton {
+  margin-top: 20px;
+  background-color: #3e6d9ca3;
+  border-color: var(--dfltTxtClr);
+  font-weight: bold;
+  background: linear-gradient(to left, var(--dfltBgClr) 50%, var(--dfltTxtClr) 50%) right;
+  background-size: 200% 100%;
+  text-shadow: 0 0 6px #666666e6;
 }
 
-.myName {
-    font-size: 48px;
-    line-height: 56px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.myButtons {
-    margin-top: 20px;
-    display: flex;
-}
-
-.myInfoButtons {
-    display: flex;
-}
-
-.myDescription {
-    color: #d5d5d5;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.75em;
-}
-
-.buttonPortfolio {
-    border-color: #0a9b94;
-    margin-right: 10px;
-    padding: 0.2em 1.6em;
-}
-
-.buttonPortfolio:hover {
-    background-color: #0a9b94;
-}
-
-.buttonContact {
-    border-color: #D5D5D5;
-    margin-right: 10px;
-    padding: 0.2em 1.6em;
-    ;
-}
-
-.buttonContact:hover {
-    background-color: #D5D5D5;
-    color: #333;
-}
-
-.buttonResume {
-    text-decoration: none;
-    border-color: #D5D5D5;
-    padding: 0.4em 1.1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttonResume:hover {
-    background-color: #D5D5D5;
-    color: #333;
-}
-
-.snsIcons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.snsIcons>a {
-    margin: 0 5px;
-}
-
-/* media query */
-
-/* Extra large devices */
-@media screen and (min-width: 992px) {}
-
-/* Large devices */
-@media screen and (max-width: 991.98px) {}
-
-/* Sepecific size to sns icons */
-@media screen and (max-width: 899.98px) {
-    .myButtons {
-        flex-wrap: wrap;
-    }
-
-    .snsIcons {
-        margin: 20px 0 0 0;
-    }
-}
-
-/* Medium devices */
-@media screen and (max-width: 767.98px) {
-    .introContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .introLeftSide {
-        width: 55%;
-    }
-
-    .myTitle {
-        margin: 20px 0;
-    }
-
-    .myName {
-        margin-bottom: 0;
-    }
-
-    .myButtons {
-        flex-direction: column;
-    }
-
-    .snsIcons {
-        justify-content: center;
-    }
-
-    .snsIcons>a {
-        margin: 0 10px;
-    }
-
-    .introRightSide {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-/* Small devices */
-@media screen and (max-width: 575.98px) {
-    .myName {
-        text-align: center;
-    }
-
-    .buttonPortfolio,
-    .buttonContact {
-        padding: 0.4em 1.1em;
-    }
-
-    .introLeftSide {
-        width: 70%;
-    }
-
-    .buttonPortfolio,
-    .buttonContact {
-        margin-right: 5px;
-    }
-
-    .myDescription {
-        font-size: 14px;
-    }
+.checkMeButton:hover {
+  background-position: left;
+  color: var(--dfltBgClr);
 }

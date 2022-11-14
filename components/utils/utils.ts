@@ -29,5 +29,10 @@ const sendEmail = async (formObj: HTMLFormElement): Promise<APIReturnType> => {
     )
 }
 
-export { scrollToTargetId, sendEmail }
+
+const replaceWithBr = (txt: string): string => {
+    return txt.replace(/\n/g, "<br />");
+  };
+
+export { scrollToTargetId, sendEmail, replaceWithBr }
 export type { APIReturnType };

@@ -1,10 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
+import Image from "next/image";
 import { sendEmail } from '../utils/utils';
 import type { APIReturnType } from '../utils/utils';
-import indexStyles from '../../styles/index.module.css'
-import contactStyles from '../../styles/contact.module.css'
+import indexStyles from '../../styles/index.module.css';
+import contactStyles from '../../styles/contact.module.css';
 import ResultMessage from '../ResultMessage';
 import LoadingIndicator from '../LoadingIndicator';
+import SectionLayout from '../SectionLayout';
 
 const Contact = () => {
     const [formStat, setFormStat] = useState<APIReturnType>('standby');
@@ -16,8 +18,8 @@ const Contact = () => {
         setFormStat('loading');
         // Send email through emailJS
         const res: APIReturnType = await sendEmail(formRef.current);
-        setFormStat(res)
-    }
+        setFormStat(res);
+    };
 
     const getContactUI = (status: APIReturnType) => {
         if (status === 'success' || status === 'error') {
@@ -80,22 +82,58 @@ const Contact = () => {
                     }
                 </button>
             </form>
-        )
-    }
+        );
+    };
 
-    const contactUI = getContactUI(formStat);
+    const contactFormUI = getContactUI(formStat);
 
     return (
-        <section
-            id="contact"
-            className={indexStyles.sections}
-        >
-            <div className={indexStyles.wrapper}>
-                <h2 className={indexStyles.sectionTitle}>Contact</h2>
-                {contactUI}
-            </div>
-        </section>
-    )
-}
+        <SectionLayout sectionId='contact'>
+            <h2 className={indexStyles.sectionTitle}>Contact</h2>
+            <div className={contactStyles.contactSectionContainer}>
+                <div className={contactStyles.contactIntro}>
+                    <h3 className={contactStyles.myName}>
+                        Soma Ikeda
+                    </h3>
+                    <p className={contactStyles.location}>
+                        🍁Burnaby, BC, Canada
+                    </p>
+                    <p className={contactStyles.contactIntroDetail}>
+                        If you ever want to grab a coffee/bubble tea or just want a quick chat - you can find me on social media or you can send me a message here!
+                    </p>
+                    <div className={contactStyles.snsIcons}>
+                        <a
+                            href="https://www.linkedin.com/in/soma-ikeda-99b9741b6"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Image
+                                src="/assets/linkedin.png"
+                                alt="linkedin icon"
+                                width={25}
+                                height={25}
+                            />
+                        </a>
 
-export default Contact
+                        <a
+                            href="https://github.com/Soma-dev0808"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Image
+                                src="/assets/github.png"
+                                alt="github icon"
+                                width={25}
+                                height={25}
+                            />
+                        </a>
+                    </div>
+
+                </div>
+                {contactFormUI}
+            </div>
+        </SectionLayout>
+    );
+};
+
+export default Contact;

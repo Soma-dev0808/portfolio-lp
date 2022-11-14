@@ -1,92 +1,199 @@
 /* CSS for portfolio section */
 
 .portfolios {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio {
-    border-bottom: 1px solid rgb(53, 53, 53);
-    padding: 0 20px 20px 20px;
-    z-index: 1;
+  position: relative;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 100px;
 }
 
-.portfolio p {
-    color: #d5d5d5
+.portfolio:last-child {
+  margin-bottom: 0px;
+}
+
+.portfolioReverse {
+  flex-direction: row-reverse;
+}
+
+.portfolioTitle {
+  font-size: 22px;
+}
+
+.portfolioTitleReverse {
+  text-align: right;
+}
+
+.portfolioDetail {
+  position: relative;
+  grid-area: 1 / 1 / -1 / 7;
+}
+
+.portfolioDetailReverse {
+  grid-column: 7 / -1;
 }
 
 .portfolioLink {
-    color: #fff;
-    text-decoration: none;
+  color: var(--whiteClr);
+  text-decoration: none;
 }
 
 .portfolioLink:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .linkIcon {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .portfolioGifContainer {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
+  grid-area: 1 / 6 / -1 / -1;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolioGifContainerReverse {
+  grid-column: 1 / 8;
+}
+
+.radialBackground {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(6, 6, 6, 0.5);
+  transition: 0.5s;
+}
+
+.radialBackgroundFullyVisible {
+  background: transparent;
 }
 
 .appDesc {
-    font-size: 17px;
-    line-height: 1.6rem;
+  font-size: 17px;
+  line-height: 1.6rem;
+  box-shadow: var(--dfltCardBoxShdw);
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  border-radius: var(--dfltBrdrRadius);
+  background-color: var(--dfltCardClr);
+  color: var(--dfltTxtClr);
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.appDescFullyVisible {
+  color: var(--whiteClr);
 }
 
 .skillUsedContainer {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.skillUsedContainerReverse {
+  justify-content: flex-end;
+}
 
 .skillUsed {
-    border: solid 1px white;
-    border-radius: 5px;
-    padding: 4px;
-    margin-right: 4px;
-    margin-bottom: 4px;
+  border: solid 2px var(--primaryClr);
+  border-radius: var(--dfltBrdrRadius);
+  padding: 4px;
+  margin-right: 4px;
+  margin-bottom: 10px;
+}
+
+.skillUsedFullyVisible {
+  color: var(--whiteClr);
 }
 
 /* media query */
 
+/* Larger than Extra large devices */
+/* @media screen and (min-width: 1440px) {
+} */
+
 /* Extra large devices */
-@media screen and (min-width: 992px) {
-    .portfolio {
-        width: 70%
-    }
+@media screen and (min-width: 1100px) {
+  .skillUsedContainer {
+    padding-right: 70px;
+  }
+
+  .skillUsedContainerReverse {
+    padding-right: 0;
+    padding-left: 70px;
+  }
 }
 
 /* Large devices */
 @media screen and (max-width: 991.98px) {
-    .portfolio {
-        width: 80%
-    }
+  .portfolio {
+    /* width: 80%; */
+  }
 
-    .portfolioGifContainer {
-        width: 100%;
-    }
+  .skillUsedContainer {
+    padding-right: 50px;
+  }
+
+  .skillUsedContainerReverse {
+    padding-right: 0;
+    padding-left: 50px;
+  }
+
+  .portfolioGifContainer {
+    width: 100%;
+  }
 }
 
 /* Medium devices */
-@media screen and (max-width: 767.98px) {}
+@media screen and (max-width: 767.98px) {
+  .portfolio {
+    z-index: 1;
+    display: flex;
+    margin: 0 0 70px 0;
+    flex-direction: column;
+  }
+  .portfolioTitleReverse {
+    text-align: center;
+  }
+
+  .skillUsedContainer,
+  .skillUsedContainerReverse {
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .portfolioDetail {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .portfolioGifContainer {
+    justify-content: center;
+  }
+}
 
 /* Small devices */
 @media screen and (max-width: 575.98px) {
-    .portfolio {
-        padding: 0px;
-    }
+  .portfolio {
+    flex-direction: column;
+    padding: 0px;
+  }
 
-    .appDesc {
-        font-size: 15px;
-    }
+  .appDesc {
+    font-size: 15px;
+  }
 }
