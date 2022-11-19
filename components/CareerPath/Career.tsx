@@ -18,7 +18,7 @@ const Career: React.FC<CareerProps> = ({
     date
 }) => {
     const ref = useRef<HTMLDivElement>(null);
-    const [_, isPartiallyVisible, isElDesiredPosition] = useScroll(ref, 30);
+    const [_, isPartiallyVisible, isElDesiredPosition] = useScroll(ref, 40);
 
     const wdLstFullyVisible = (isPartiallyVisible && isElDesiredPosition) && careerPathStyle.expandWorkDetailList;
     const expandContentBorder = (isPartiallyVisible && isElDesiredPosition) && careerPathStyle.expandContentBorder;

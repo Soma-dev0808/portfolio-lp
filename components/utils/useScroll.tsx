@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 const useScroll = (
     ref: React.RefObject<HTMLDivElement>,
-    elPositionPercent = -1, // By setting percent for this(eg. 30, 20), you can get notified if element passed the given percent position of border.
+    elPositionPercent = -1, // By setting percent for this(eg. 30, 20), you can get notified when element passed the given percentage of Y position.
 ) => {
     const [isFullyVisible, setIsFullyVisible] = useState<boolean>(false);
     const [isPartiallyVisible, setIsPartiallyVisible] = useState<boolean>(false);
     const [isElDesiredPosition, setIsElDesiredPosition] = useState<boolean>(false);
-
 
     useEffect(() => {
         const toggleTxtClr = () => {

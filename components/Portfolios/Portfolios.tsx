@@ -22,7 +22,7 @@ const Portfolios = () => {
             portfolioDesc={p.portfolioDesc}
             portfolioId={p.portfolioId}
             portfolioGitLink={p.portfolioGitLink}
-            portfolioImgPath={p.portfolioImgPath}
+            portfolioGifPath={p.portfolioGifPath}
             skillUsed={p.skillUsed}
             isPosReverse={p.isPosReverse}
           />

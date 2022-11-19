@@ -19,9 +19,9 @@
   height: 100%;
   padding: 10px;
   border-radius: var(--dfltBrdrRadius);
-  background: -moz-linear-gradient(right, var(--dfltCardClr) 65%, #3b536d);
-  background: -webkit-linear-gradient(right,  var(--dfltCardClr) 65%, #3b536d);
-  background: linear-gradient(to left, var(--dfltCardClr) 65%, #3b536d);
+  background: -moz-linear-gradient(top right, var(--dfltCardClr) 70%, #345c88);
+  background: -webkit-linear-gradient(top right,  var(--dfltCardClr) 70%, #345c88);
+  background: linear-gradient(to top left, var(--dfltCardClr) 70%, #345c88);
 }
 
 .skill:hover {
