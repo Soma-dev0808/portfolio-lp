@@ -1,14 +1,19 @@
 import React, { useRef } from "react";
 import Image from "next/image";
+import Link from 'next/link';
 import portfolioStyles from "../../styles/portfolio.module.css";
 import useScroll from "../utils/useScroll";
 import { replaceWithBr } from "../utils/utils";
+
+import indexStyles from "../../styles/index.module.css";
 
 interface PortfolioProps {
   portfolioTitle: string;
   portfolioDesc: string;
   portfolioId: string;
+  portfolioLiveAppLink: string;
   portfolioGitLink: string;
+  portfolioGifPath: string;
   portfolioImgPath: string;
   skillUsed: string[];
   isPosReverse?: boolean;
@@ -19,12 +24,11 @@ const Portfolio: React.FC<PortfolioProps> = ({
   portfolioDesc,
   portfolioId,
   portfolioGitLink,
-  portfolioImgPath,
+  portfolioGifPath,
   skillUsed,
   isPosReverse = false,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
-
 
   const [isFullyVisible] = useScroll(ref);
 
@@ -64,6 +68,24 @@ const Portfolio: React.FC<PortfolioProps> = ({
             </span>
           </h3>
         </a>
+        <div>
+          <a
+            href="https://github.com/Soma-dev0808"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src="/assets/github.png"
+              alt="github icon"
+              width={25}
+              height={25}
+            />
+          </a>
+
+          <Link href={`/portfolio-detail/${encodeURIComponent(portfolioId)}`} className={indexStyles.button}>
+            See More
+          </Link>
+        </div>
         <div
           className={`${portfolioStyles.skillUsedContainer} ${isPosReverse && portfolioStyles.skillUsedContainerReverse
             }`}
@@ -88,7 +110,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
           }`}
       >
         <div className={`${portfolioStyles.radialBackground} ${gifClss}`} />
-        <Image src={portfolioImgPath} alt="chat app" width={700} height={500} />
+        <Image src={portfolioGifPath} alt="chat app" width={700} height={500} />
       </div>
     </div>
   );

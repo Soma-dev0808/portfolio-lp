@@ -107,7 +107,8 @@
 }
 
 .skillUsed {
-  border: solid 2px var(--primaryClr);
+  color: var(--primaryDarkClr);
+  border: solid 1px var(--primaryDarkClr);
   border-radius: var(--dfltBrdrRadius);
   padding: 4px;
   margin-right: 4px;
@@ -115,7 +116,8 @@
 }
 
 .skillUsedFullyVisible {
-  color: var(--whiteClr);
+  color: var(--primaryClr);
+  border: solid 1px var(--primaryClr);
 }
 
 /* media query */

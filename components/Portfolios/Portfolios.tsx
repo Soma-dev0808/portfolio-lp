@@ -18,13 +18,7 @@ const Portfolios = () => {
         {portfolioSets.map((p) => (
           <Portfolio
             key={p.portfolioId}
-            portfolioTitle={p.portfolioTitle}
-            portfolioDesc={p.portfolioDesc}
-            portfolioId={p.portfolioId}
-            portfolioGitLink={p.portfolioGitLink}
-            portfolioImgPath={p.portfolioImgPath}
-            skillUsed={p.skillUsed}
-            isPosReverse={p.isPosReverse}
+            {...p}
           />
         ))}
       </div>
