@@ -41,7 +41,6 @@
 
 .sectionTitle {
   color: var(--whiteClr);
-  ;
   display: inline-block;
   position: relative;
   font-size: clamp(24px, 5vw, 30px);

@@ -1,18 +1,27 @@
 import React, { useEffect, useRef } from "react";
+import Navbar from "../Navbar";
+import useScroll from "../utils/useScroll";
+import { scrollToTargetId } from "../utils/utils";
 
 import indexStyles from "../../styles/index.module.css";
 import introStyles from "../../styles/intro.module.css";
-import { scrollToTargetId } from "../utils/utils";
 
 const Intro = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isFullyVisible] = useScroll(sectionRef);
+
   useEffect(() => {
     if (videoRef.current) videoRef.current.playbackRate = 0.7;
   }, []);
   const handleScrollToAboutMe = () => scrollToTargetId("#aboutMe");
 
   return (
-    <section className={`${indexStyles.sections} ${introStyles.introSection}`}>
+    <section
+      ref={sectionRef}
+      id="intro"
+      className={`${indexStyles.sections} ${introStyles.introSection}`}
+    >
       <div className={`${introStyles.lpTitle} ${introStyles.introWrapper}`}>
         <div className={`${indexStyles.fadeUp} ${indexStyles.displaDelay100}`}>
           <p>Hi, my name is</p>
@@ -59,6 +68,8 @@ const Intro = () => {
           <p>Error with dispalying a video.</p>
         </video>
       </div>
+      {/* Navbar */}
+      {<Navbar shouldDisplay={!isFullyVisible} isIndexPage />}
     </section>
   );
 };

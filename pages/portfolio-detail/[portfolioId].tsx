@@ -10,6 +10,7 @@ import { replaceWithBr } from "../../components/utils/utils";
 
 import indexStyles from "../../styles/index.module.css";
 import portfolioDetailStyles from "../../styles/portfolioDetail.module.css";
+import Navbar from "../../components/Navbar";
 
 // Show portfolio detail
 const PortfolioDetail: NextPage = () => {
@@ -48,6 +49,7 @@ const PortfolioDetail: NextPage = () => {
 
     return (
         <AppLyout tabTitle={'Soma Ikeda - ' + (portfolioTitle)}>
+            <Navbar shouldDisplay isIndexPage={false} />
             <section className={indexStyles.sections}>
                 <div className={portfolioDetailStyles.wrapper}>
                     <div className={`${portfolioDetailStyles.imageSection} ${indexStyles.fadeUp} ${indexStyles.displaDelay100}`}>
