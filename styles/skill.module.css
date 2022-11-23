@@ -35,7 +35,7 @@
 }
 
 .skillDescription > h4 {
-  color: #ccd6f6;
+  color: var(--whiteClr);
 }
 
 .skillDescription > p {

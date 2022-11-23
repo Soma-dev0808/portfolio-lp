@@ -46,20 +46,88 @@
 .portfolioLink {
   color: var(--whiteClr);
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.portfolioLink img {
+  transition: 0.3s;
 }
 
 .portfolioLink:hover {
-  text-decoration: underline;
+  color: var(--primaryClr);
+}
+
+.portfolioLink:hover img {
+  filter: invert(42%) sepia(87%) saturate(4203%) hue-rotate(156deg) brightness(99%) contrast(92%);
 }
 
 .linkIcon {
   margin-left: 5px;
 }
 
+.linksContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--whiteClr);
+}
+
+.linksContainerReverse {
+  justify-content: flex-end;
+}
+
+.linksContainer a {
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.linksContainer a:hover {
+  color: var(--primaryClr);
+}
+
+.linksContainer a:hover img {
+  filter: invert(42%) sepia(87%) saturate(4203%) hue-rotate(156deg) brightness(99%) contrast(92%);
+}
+
+.linksContainer a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primaryClr);
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: left bottom;
+}
+
+.linksContainer a:hover::after {
+  transform: scale(1, 1);
+}
+
+.github {
+  margin-left: 5px;
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+}
+
+.slash {
+  margin: 5px;
+}
+
 .portfolioGifContainer {
   grid-area: 1 / 6 / -1 / -1;
   position: relative;
   z-index: 1;
+}
+
+.portfolioGif {
+  border-radius: 5px;
 }
 
 .portfolioGifContainerReverse {
@@ -108,16 +176,17 @@
 
 .skillUsed {
   color: var(--primaryDarkClr);
-  border: solid 1px var(--primaryDarkClr);
+  border: solid 2px var(--primaryDarkClr);
   border-radius: var(--dfltBrdrRadius);
   padding: 4px;
   margin-right: 4px;
   margin-bottom: 10px;
+  transition: 0.5s;
 }
 
 .skillUsedFullyVisible {
   color: var(--primaryClr);
-  border: solid 1px var(--primaryClr);
+  border: solid 2px var(--primaryClr);
 }
 
 /* media query */
@@ -166,8 +235,13 @@
     margin: 0 0 70px 0;
     flex-direction: column;
   }
+
   .portfolioTitleReverse {
     text-align: center;
+  }
+
+  .linksContainer {
+    justify-content: center;
   }
 
   .skillUsedContainer,
@@ -185,6 +259,19 @@
 
   .portfolioGifContainer {
     justify-content: center;
+  }
+
+  .radialBackground {
+    background: transparent
+  }
+
+  .appDesc {
+    color: var(--whiteClr);
+  }
+
+  .skillUsed {
+    color: var(--primaryClr);
+    border: solid 2px var(--primaryClr);
   }
 }
 

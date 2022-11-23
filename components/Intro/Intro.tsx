@@ -47,7 +47,7 @@ const Intro = () => {
         <video
           ref={videoRef}
           className={introStyles.video}
-          poster="./assets/tree.mp4"
+          poster="./assets/tree_alt.png"
           playsInline
           muted
           autoPlay

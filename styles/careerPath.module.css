@@ -2,6 +2,7 @@
     position: relative;
     margin-top: 40px;
   }
+
   .steps::after {
     content: "";
     position: absolute;
@@ -12,7 +13,7 @@
     bottom: 0;
     left: 50%;
   }
-  
+
   .stepsContainer {
     display: flex;
     position: relative;
@@ -65,7 +66,7 @@
     font-weight: 600;
     color: var(--primaryClr);
   }
-    
+
   .steps .stepsContainer .date {
     font-weight: 900;
     font-size: 16px;
@@ -86,7 +87,7 @@
   .steps .stepsContainer .dateFullyVisible {
     background-color: var(--primaryClr);
   }
-  
+
   .stepLine {
     width: 40px;
     background-color: var(--primaryClr);
@@ -115,16 +116,12 @@
     height: 60px;
     z-index: 99;
     transition: 0.7s;
-    background: -webkit-linear-gradient(
-        top,
+    background: -webkit-linear-gradient(top,
         #ffffff00 0%,
-        #112240 60%
-      );
-      background: linear-gradient(
-        to bottom,
+        #112240 60%);
+    background: linear-gradient(to bottom,
         #ffffff00 0%,
-        #112240 60%
-      );
+        #112240 60%);
   }
 
   .expandWorkDetailList .workDetailList {
@@ -151,18 +148,45 @@
     margin-bottom: 10px;
     font-size: 15px;
   }
-    
+
   @media (max-width: 767.98px) {
     .steps::after {
       left: 32px;
     }
+
     .stepsContainer {
       left: 0;
       flex-direction: row-reverse;
       width: auto;
       margin-bottom: 16px;
     }
+
+    .stepsContainer .content {
+      padding: 10px 10px;
+      font-size: 13px;
+    }
+
+    .workDetailListItem {
+      font-size: 13px;
+    }
+
     .steps .stepsContainer:nth-child(even) {
       left: 0;
+    }
+
+    .expandContentBorder .content::after {
+      height: 90%;
+    }
+  }
+
+  /* Small devices */
+  @media screen and (max-width: 575.98px) {
+    .portfolio {
+      flex-direction: column;
+      padding: 0px;
+    }
+
+    .expandContentBorder .content::after {
+      height: 95%;
     }
   }

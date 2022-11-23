@@ -5,8 +5,6 @@ import portfolioStyles from "../../styles/portfolio.module.css";
 import useScroll from "../utils/useScroll";
 import { replaceWithBr } from "../utils/utils";
 
-import indexStyles from "../../styles/index.module.css";
-
 interface PortfolioProps {
   portfolioTitle: string;
   portfolioDesc: string;
@@ -16,6 +14,12 @@ interface PortfolioProps {
   portfolioGifPath: string;
   portfolioImgPath: string;
   skillUsed: string[];
+  impDescription: string[];
+  difficultPart: string;
+  duration: string;
+  other: string;
+  nextPortfolio: { pname: string; pid: string; };
+  prevPortfolio: { pname: string; pid: string; };
   isPosReverse?: boolean;
 }
 
@@ -68,27 +72,38 @@ const Portfolio: React.FC<PortfolioProps> = ({
             </span>
           </h3>
         </a>
-        <div>
+        <div className={`${portfolioStyles.linksContainer} ${isPosReverse && portfolioStyles.linksContainerReverse}`}>
           <a
-            href="https://github.com/Soma-dev0808"
+            className={portfolioStyles.githubLink}
+            href={portfolioGitLink}
             target="_blank"
             rel="noreferrer"
           >
             <Image
               src="/assets/github.png"
               alt="github icon"
-              width={25}
-              height={25}
+              width={20}
+              height={20}
             />
+
+            <span className={portfolioStyles.github}>Github</span>
           </a>
 
-          <Link href={`/portfolio-detail/${encodeURIComponent(portfolioId)}`} className={indexStyles.button}>
+          <span className={portfolioStyles.slash}>/</span>
+
+          <Link
+            href={`/portfolio-detail/${encodeURIComponent(portfolioId)}`}
+          >
             See More
           </Link>
         </div>
+
+        <p
+          className={`${portfolioStyles.appDesc} ${descClss}`}
+          dangerouslySetInnerHTML={{ __html: replaceWithBr(portfolioDesc) }}
+        ></p>
         <div
-          className={`${portfolioStyles.skillUsedContainer} ${isPosReverse && portfolioStyles.skillUsedContainerReverse
-            }`}
+          className={`${portfolioStyles.skillUsedContainer} ${isPosReverse && portfolioStyles.skillUsedContainerReverse}`}
         >
           {skillUsed.map((skill) => (
             <span
@@ -99,18 +114,19 @@ const Portfolio: React.FC<PortfolioProps> = ({
             </span>
           ))}
         </div>
-
-        <p
-          className={`${portfolioStyles.appDesc} ${descClss}`}
-          dangerouslySetInnerHTML={{ __html: replaceWithBr(portfolioDesc) }}
-        ></p>
       </div>
       <div
         className={`${portfolioStyles.portfolioGifContainer} ${isPosReverse && portfolioStyles.portfolioGifContainerReverse
           }`}
       >
         <div className={`${portfolioStyles.radialBackground} ${gifClss}`} />
-        <Image src={portfolioGifPath} alt="chat app" width={700} height={500} />
+        <Image
+          src={portfolioGifPath}
+          className={portfolioStyles.portfolioGif}
+          alt="chat app"
+          width={700}
+          height={500}
+        />
       </div>
     </div>
   );
