@@ -7,8 +7,10 @@ body {
   color: var(--whiteClr);
   font-size: 16px;
   margin: 0;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,6 +28,7 @@ body::-webkit-scrollbar {
   --dfltCardClr: #112240;
   --dfltCardBoxShdw: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
   --dfltBrdrRadius: 5px;
+  --imgBrdrRadius: 10px;
 }
 
 a {
