@@ -29,17 +29,15 @@ const AboutMe = () => {
           <p className={`${aboutMeStyles.myDescription} ${descCls}`}>
             Hi, I am Soma Ikeda. In 4 years of experience as web developer in
             Japan and Philippines, I have developed many applications for web
-            and mobile. I am passionate about creating SPA with React.js and
+            and mobile. I am passionate about creating SPA(Single Page Application) with React.js and
             Redux. Also have some experiences with Backend and Mobile
             development.
           </p>
-          <p className={`${aboutMeStyles.myDescription} ${descCls}`}>
-            Hi, I am Soma Ikeda. In 4 years of experience as web developer in
-            Japan and Philippines, I have developed many applications for web
-          </p>
-          <p className={`${aboutMeStyles.myDescription} ${descCls}`}>
-            Here are a few technologies I’ve been working with recently:
-          </p>
+          {/* <p className={`${aboutMeStyles.myDescription} ${descCls}`}>
+            Previously I have developed Saas application which has over 500k users,
+            CRM application for sales person in medical industry, and a notification system for accounting information using React.js and Next.js.
+          </p> */}
+
           <div className={aboutMeStyles.myButtons}>
             <div className={aboutMeStyles.myInfoButtons}>
               <button
