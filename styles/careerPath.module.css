@@ -22,18 +22,18 @@
   }
 
   .stepsContainer .content {
+    position: relative;
     color: var(--dfltTxtClr);
     font-size: 16px;
-    padding: 10px 22px;
+    padding: 10px 22px 25px;
     background-color: var(--dfltCardClr);
-    position: relative;
     border-radius: var(--dfltBrdrRadius);
   }
 
   .stepsContainer .content::after {
     border: 2px solid var(--primaryClr);
-    top: 46px;
-    left: 10px;
+    top: 50px;
+    left: 25px;
     z-index: -1;
     content: "";
     display: block;
@@ -44,8 +44,21 @@
     transition: 0.7s;
   }
 
-  .expandContentBorder .content::after {
+  .stepsContainerFocus .content::after {
     height: 95%;
+  }
+
+  .seeMoreButton {
+    position: absolute;
+    z-index: 99;
+    bottom: 10px;
+    right: 10px;
+    width: var(--buttonSm);
+    border-color: var(--dfltTxtClr);
+    background: linear-gradient(to left, var(--dfltBgClr) 50%, var(--dfltTxtClr) 50%) right;
+    background-size: 200% 100%;
+    padding: var(--buttonSmPadding);
+    box-shadow: none;
   }
 
   .steps .stepsContainer:nth-child(even) {
@@ -74,7 +87,7 @@
     margin-bottom: 10px;
     width: 62px;
     height: 62px;
-    background-color: var(--whiteClr);
+    background-color: var(--dfltTxtClr);
     border-radius: 50%;
     flex-shrink: 0;
     align-items: center;
@@ -84,7 +97,7 @@
     transition: 0.5s;
   }
 
-  .steps .stepsContainer .dateFullyVisible {
+  .steps .stepsContainerFocus .date {
     background-color: var(--primaryClr);
   }
 
@@ -124,13 +137,13 @@
         #112240 60%);
   }
 
-  .expandWorkDetailList .workDetailList {
+  .contentFocus .workDetailList {
     color: var(--whiteClr);
     max-height: 1000px;
     margin-bottom: 16px;
   }
 
-  .expandWorkDetailList .workDetailList::before {
+  .contentFocus .workDetailList::before {
     opacity: 0;
   }
 
@@ -174,7 +187,7 @@
       left: 0;
     }
 
-    .expandContentBorder .content::after {
+    .stepsContainerFocus .content::after {
       height: 90%;
     }
   }
@@ -186,7 +199,27 @@
       padding: 0px;
     }
 
-    .expandContentBorder .content::after {
+    .stepsContainer .content {
+      padding: 10px 22px 30px;
+    }
+
+    .stepsContainer .content::after {
+      top: 44px;
+      left: 9px;
+    }
+
+    .stepsContainerFocus .content::after {
       height: 95%;
     }
+
+    .seeMoreButton {
+      font-size: var(--buttonSmTxtResp);
+      width: var(--buttonSm);
+      padding: var(--buttonSmPaddingResp);
+    }
+
+    .stepLine {
+      width: 10px;
+    }
+
   }

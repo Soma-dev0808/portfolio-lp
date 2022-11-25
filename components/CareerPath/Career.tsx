@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
+
+import indexStyles from "../../styles/index.module.css";
 import careerPathStyle from '../../styles/careerPath.module.css';
-import useScroll from '../utils/useScroll';
 
 interface CareerProps {
     companyName: string;
@@ -17,17 +18,18 @@ const Career: React.FC<CareerProps> = ({
     workDetails,
     date
 }) => {
-    const ref = useRef<HTMLDivElement>(null);
-    const [_, isPartiallyVisible, isElDesiredPosition] = useScroll(ref, 40);
+    const [isFocus, setIsFocus] = useState<boolean>(false);
 
-    const wdLstFullyVisible = (isPartiallyVisible && isElDesiredPosition) && careerPathStyle.expandWorkDetailList;
-    const expandContentBorder = (isPartiallyVisible && isElDesiredPosition) && careerPathStyle.expandContentBorder;
-    const dateFullyVisible = (isPartiallyVisible && isElDesiredPosition) && careerPathStyle.dateFullyVisible;
+    const handleOnSeeMoreClick = () => {
+        setIsFocus(prev => !prev);
+    };
 
+    const stepsContainerOnFocus = isFocus && careerPathStyle.stepsContainerFocus;
+    const contentOnFocus = isFocus && careerPathStyle.contentFocus;
 
     return (
-        <div ref={ref} className={`${careerPathStyle.stepsContainer} ${expandContentBorder}`}>
-            <div className={`${careerPathStyle.content} ${wdLstFullyVisible}`}>
+        <div className={`${careerPathStyle.stepsContainer} ${stepsContainerOnFocus}`}>
+            <div className={`${careerPathStyle.content} ${contentOnFocus}`}>
                 <h3>{position}</h3>
                 <p className={careerPathStyle.companyInfo}>
                     <span className={careerPathStyle.companyName}>
@@ -42,9 +44,17 @@ const Career: React.FC<CareerProps> = ({
                         </li>
                     ))}
                 </ul>
+
+                <button
+                    type='button'
+                    className={`${indexStyles.button} ${careerPathStyle.seeMoreButton}`}
+                    onClick={handleOnSeeMoreClick}
+                >
+                    {isFocus ? 'Hide' : 'See More'}
+                </button>
             </div>
             <i className={careerPathStyle.stepLine}></i>
-            <div className={`${careerPathStyle.date} ${dateFullyVisible}`}>{date}</div>
+            <div className={`${careerPathStyle.date}`}>{date}</div>
         </div>
     );
 };

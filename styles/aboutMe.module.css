@@ -73,20 +73,10 @@
   color: var(--whiteClr);
 }
 
-.buttonPortfolio {
-  border-color: var(--primaryClr);
-  margin-right: 10px;
-  padding: 0.2em 1.6em;
-}
-
-.buttonPortfolio:hover {
-  background-color: var(--primaryClr);
-}
-
 .buttonContact {
   border-color: var(--dfltTxtClr);
   margin-right: 10px;
-  padding: 0.2em 1.6em;
+  padding: var(--buttonSmPadding);
   background: linear-gradient(to left, var(--dfltBgClr) 50%, var(--dfltTxtClr) 50%) right;
   background-size: 200% 100%;
 }
@@ -100,12 +90,17 @@
   text-decoration: none;
   text-shadow: none;
   border-color: var(--dfltTxtClr);
-  padding: 0.4em 1.1em;
+  padding: 0.4em;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(to left, var(--dfltBgClr) 50%, var(--dfltTxtClr) 52%) right;
   background-size: 208% 100%;
+}
+
+.buttonContact,
+.buttonResume {
+  width: var(--buttonSm);
 }
 
 .buttonResume:hover {
@@ -120,11 +115,11 @@
   margin-left: 20px;
 }
 
-.snsIcons > a {
+.snsIcons>a {
   margin: 0 5px;
 }
 
-.snsIcons > a:hover {
+.snsIcons>a:hover {
   transition: 0.5s;
   transform: translateY(-4px);
 }
@@ -132,12 +127,10 @@
 /* media query */
 
 /* Extra large devices */
-@media screen and (min-width: 992px) {
-}
+@media screen and (min-width: 992px) {}
 
 /* Large devices */
-@media screen and (max-width: 991.98px) {
-}
+@media screen and (max-width: 991.98px) {}
 
 /* Sepecific size to sns icons */
 @media screen and (max-width: 899.98px) {
@@ -184,7 +177,7 @@
     justify-content: center;
   }
 
-  .snsIcons > a {
+  .snsIcons>a {
     margin: 0 10px;
   }
 
@@ -205,7 +198,7 @@
 
   .buttonPortfolio,
   .buttonContact {
-    padding: 0.4em 1.1em;
+    padding: var(--buttonSmPaddingResp);
   }
 
   .introRightSide {
@@ -219,5 +212,16 @@
 
   .myDescription {
     font-size: 14px;
+  }
+
+  .buttonContact,
+  .buttonResume {
+    font-size: var(--buttonSmTxtResp);
+    width: var(--buttonSmResp);
+  }
+
+  .buttonContact {
+    display: flex;
+    justify-content: center;
   }
 }

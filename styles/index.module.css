@@ -74,14 +74,16 @@
   color: var(--whiteClr);
   background-color: #333;
   box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
-  padding: 0.6em 2.1em;
+  padding: 0.6em 0;
   border-radius: var(--dfltBrdrRadius);
   line-height: 1.2;
   font-size: 1em;
-  border: 2px solid black;
+  border: 2px solid var(--primaryClr);
   transition: 0.2s;
   background: linear-gradient(to left, var(--dfltBgClr) 50%, var(--primaryClr) 50%) right;
   background-size: 200% 100%;
+  font-weight: bold;
+  width: var(--button);
 }
 
 .button:hover {
@@ -132,8 +134,8 @@
 /* Larger than Extra large devices */
 @media screen and (min-width: 1440px) {
   .wrapper {
-    width: 60%;
-    max-width: 1000px;
+    width: 65%;
+    max-width: 1300px;
   }
 }
 
@@ -165,11 +167,25 @@
   .sectionTitle {
     margin-bottom: 30px;
   }
+
+  .button {
+    width: var(--buttonResp1);
+  }
 }
 
 /* Small devices */
 @media screen and (max-width: 575.98px) {
+  .wrapper {
+    width: 95%;
+  }
+
   .sections {
     padding: 20px 10px;
+  }
+
+  .button {
+    font-size: var(--buttonSmTxtResp);
+    padding: 0.4em 0;
+    width: var(--buttonResp2);
   }
 }

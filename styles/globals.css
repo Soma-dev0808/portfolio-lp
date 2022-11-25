@@ -29,6 +29,14 @@ body::-webkit-scrollbar {
   --dfltCardBoxShdw: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
   --dfltBrdrRadius: 5px;
   --imgBrdrRadius: 10px;
+  --button: 144px;
+  --buttonResp1: 120px;
+  --buttonResp2: 100px;
+  --buttonSm: 100px;
+  --buttonSmResp: 80px;
+  --buttonSmTxtResp: 14px;
+  --buttonSmPadding: 0.2em;
+  --buttonSmPaddingResp: 0.4em 1.1em;
 }
 
 a {

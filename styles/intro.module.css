@@ -4,8 +4,10 @@
 }
 
 .introSection {
-  position: relative; /*h1の中央寄せ配置の起点とするためのrelative*/
-  height: 100vh; /*高さを全画面にあわせる*/
+  position: relative;
+  /*h1の中央寄せ配置の起点とするためのrelative*/
+  height: 100vh;
+  /*高さを全画面にあわせる*/
   background-color: #0e0d0dbf;
   background: -moz-linear-gradient(top, #0e0d0dbf 80%, var(--dfltBgClr));
   background: -webkit-linear-gradient(top, #0e0d0dbf 80%, var(--dfltBgClr));
@@ -28,8 +30,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
-  height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  width: 177.77777778vh;
+  height: 56.25vw;
   min-height: 100%;
   min-width: 100%;
 }
@@ -62,14 +64,18 @@
   line-height: 1.5;
 }
 
+.introButton {
+  font-weight: bold;
+  text-shadow: 0 0 6px #666666e6;
+}
+
 .checkMeButton {
   margin-top: 20px;
+  margin-right: 10px;
   background-color: #3e6d9ca3;
   border-color: var(--dfltTxtClr);
-  font-weight: bold;
   background: linear-gradient(to left, var(--dfltBgClr) 50%, var(--dfltTxtClr) 50%) right;
   background-size: 200% 100%;
-  text-shadow: 0 0 6px #666666e6;
 }
 
 .checkMeButton:hover {

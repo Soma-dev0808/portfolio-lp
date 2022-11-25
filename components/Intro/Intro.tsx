@@ -14,7 +14,9 @@ const Intro = () => {
   useEffect(() => {
     if (videoRef.current) videoRef.current.playbackRate = 0.7;
   }, []);
+
   const handleScrollToAboutMe = () => scrollToTargetId("#aboutMe");
+  const handleScrollToPortfolios = () => scrollToTargetId("#portfolios");
 
   return (
     <section
@@ -44,10 +46,16 @@ const Intro = () => {
         </div>
         <div className={`${indexStyles.fadeUp} ${indexStyles.displaDelay500}`}>
           <button
-            className={`${indexStyles.button} ${introStyles.checkMeButton}`}
+            className={`${indexStyles.button} ${introStyles.introButton} ${introStyles.checkMeButton}`}
             onClick={handleScrollToAboutMe}
           >
             About Me
+          </button>
+          <button
+            className={`${indexStyles.button} ${introStyles.introButton}`}
+            onClick={handleScrollToPortfolios}
+          >
+            Portfolio
           </button>
         </div>
       </div>
