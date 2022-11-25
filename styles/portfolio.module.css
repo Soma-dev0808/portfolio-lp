@@ -79,33 +79,9 @@
 .linksContainer a {
   text-decoration: none;
   position: relative;
-  padding-bottom: 5px;
+  text-align: center;
 }
 
-.linksContainer a:hover {
-  color: var(--primaryClr);
-}
-
-.linksContainer a:hover img {
-  filter: invert(42%) sepia(87%) saturate(4203%) hue-rotate(156deg) brightness(99%) contrast(92%);
-}
-
-.linksContainer a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--primaryClr);
-  transition: all 0.3s;
-  transform: scale(0, 1);
-  transform-origin: left bottom;
-}
-
-.linksContainer a:hover::after {
-  transform: scale(1, 1);
-}
 
 .github {
   margin-left: 5px;
@@ -139,13 +115,9 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(6, 6, 6, 0.5);
   transition: 0.5s;
 }
 
-.radialBackgroundFullyVisible {
-  background: transparent;
-}
 
 .appDesc {
   font-size: 17px;
@@ -156,13 +128,10 @@
   padding: 25px;
   border-radius: var(--dfltBrdrRadius);
   background-color: var(--dfltCardClr);
-  color: var(--dfltTxtClr);
   font-size: 18px;
   transition: 0.5s;
-}
-
-.appDescFullyVisible {
   color: var(--whiteClr);
+  margin-top: 5px;
 }
 
 .skillUsedContainer {
@@ -175,18 +144,13 @@
 }
 
 .skillUsed {
-  color: var(--primaryDarkClr);
-  border: solid 2px var(--primaryDarkClr);
   border-radius: var(--dfltBrdrRadius);
   padding: 4px;
   margin-right: 4px;
   margin-bottom: 10px;
   transition: 0.5s;
-}
-
-.skillUsedFullyVisible {
   color: var(--primaryClr);
-  border: solid 2px var(--primaryClr);
+  font-size: 14px;
 }
 
 /* media query */
@@ -267,11 +231,6 @@
 
   .appDesc {
     color: var(--whiteClr);
-  }
-
-  .skillUsed {
-    color: var(--primaryClr);
-    border: solid 2px var(--primaryClr);
   }
 }
 

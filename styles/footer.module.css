@@ -1,7 +1,6 @@
 /* Footer section */
 .footerSection {
     background-color: var(--dfltBgClr);
-    border-top: 1px solid rgb(53, 53, 53);
     color: #aaa;
     font-size: 11px;
     text-align: center;

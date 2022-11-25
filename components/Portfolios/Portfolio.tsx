@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from 'next/link';
-import portfolioStyles from "../../styles/portfolio.module.css";
-import useScroll from "../utils/useScroll";
 import { replaceWithBr } from "../utils/utils";
+
+import indexStyles from "../../styles/index.module.css";
+import portfolioStyles from "../../styles/portfolio.module.css";
 
 interface PortfolioProps {
   portfolioTitle: string;
@@ -32,17 +33,8 @@ const Portfolio: React.FC<PortfolioProps> = ({
   skillUsed,
   isPosReverse = false,
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const [isFullyVisible] = useScroll(ref);
-
-  const descClss = isFullyVisible && portfolioStyles.appDescFullyVisible;
-  const gifClss = isFullyVisible && portfolioStyles.radialBackgroundFullyVisible;
-  const skillUsedClss = isFullyVisible && portfolioStyles.skillUsedFullyVisible;
-
   return (
     <div
-      ref={ref}
       className={`${portfolioStyles.portfolio} ${isPosReverse && portfolioStyles.portfolioReverse
         }`}
     >
@@ -72,54 +64,41 @@ const Portfolio: React.FC<PortfolioProps> = ({
             </span>
           </h3>
         </a>
-        <div className={`${portfolioStyles.linksContainer} ${isPosReverse && portfolioStyles.linksContainerReverse}`}>
-          <a
-            className={portfolioStyles.githubLink}
-            href={portfolioGitLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              src="/assets/github.png"
-              alt="github icon"
-              width={20}
-              height={20}
-            />
 
-            <span className={portfolioStyles.github}>Github</span>
-          </a>
-
-          <span className={portfolioStyles.slash}>/</span>
-
-          <Link
-            href={`/portfolio-detail/${encodeURIComponent(portfolioId)}`}
-          >
-            See More
-          </Link>
-        </div>
-
-        <p
-          className={`${portfolioStyles.appDesc} ${descClss}`}
-          dangerouslySetInnerHTML={{ __html: replaceWithBr(portfolioDesc) }}
-        ></p>
         <div
           className={`${portfolioStyles.skillUsedContainer} ${isPosReverse && portfolioStyles.skillUsedContainerReverse}`}
         >
           {skillUsed.map((skill) => (
             <span
               key={skill}
-              className={`${portfolioStyles.skillUsed} ${skillUsedClss}`}
+              className={portfolioStyles.skillUsed}
             >
               {skill}
             </span>
           ))}
+        </div>
+
+        <p
+          className={portfolioStyles.appDesc}
+          dangerouslySetInnerHTML={{ __html: replaceWithBr(portfolioDesc) }}
+        ></p>
+
+        <div className={`${portfolioStyles.linksContainer} ${isPosReverse && portfolioStyles.linksContainerReverse}`}>
+          <Link
+            href={`/portfolio-detail/${encodeURIComponent(portfolioId)}`}
+          >
+            <a className={indexStyles.button}>
+              See More
+            </a>
+          </Link>
+
         </div>
       </div>
       <div
         className={`${portfolioStyles.portfolioGifContainer} ${isPosReverse && portfolioStyles.portfolioGifContainerReverse
           }`}
       >
-        <div className={`${portfolioStyles.radialBackground} ${gifClss}`} />
+        <div className={`${portfolioStyles.radialBackground}`} />
         <Image
           src={portfolioGifPath}
           className={portfolioStyles.portfolioGif}
@@ -128,7 +107,7 @@ const Portfolio: React.FC<PortfolioProps> = ({
           height={500}
         />
       </div>
-    </div>
+    </div >
   );
 };
 

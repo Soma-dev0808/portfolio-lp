@@ -11,7 +11,6 @@ const AboutMe = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [isFullyVisible] = useScroll(ref);
 
-  const handleScrollToPortfolios = () => scrollToTargetId("#portfolios");
   const handleScrollToContact = () => scrollToTargetId("#contact");
 
   const descCls = isFullyVisible && aboutMeStyles.myDescriptionFullyVisible;
@@ -40,12 +39,6 @@ const AboutMe = () => {
 
           <div className={aboutMeStyles.myButtons}>
             <div className={aboutMeStyles.myInfoButtons}>
-              <button
-                className={`${indexStyles.button} ${aboutMeStyles.buttonPortfolio}`}
-                onClick={handleScrollToPortfolios}
-              >
-                Portfolio
-              </button>
               <button
                 className={`${indexStyles.button} ${aboutMeStyles.buttonContact}`}
                 onClick={handleScrollToContact}

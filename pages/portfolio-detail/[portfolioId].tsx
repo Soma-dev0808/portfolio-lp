@@ -183,6 +183,13 @@ const PortfolioDetail: NextPage = () => {
                             >
                                 {'← ' + prevPortfolio.pname}
                             </Link>
+
+                            <Link
+                                href={`/`}
+                            >
+                                Home
+                            </Link>
+
                             <Link
                                 href={`/portfolio-detail/${encodeURIComponent(nextPortfolio.pid)}`}
                             >
