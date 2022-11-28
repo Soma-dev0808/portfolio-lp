@@ -132,7 +132,7 @@ const portfolioData: PortfolioData = {
                 "Used Recoil to manage state. Since recoil is good at encapsulating business logic, I wanted to try this API.",
                 "Used Tailwindcss which helps us to develop UI faster."
             ],
-            difficultPart: "<span style='color: var(--primaryClr)'>There was not really a hard part,</span> but I had to create a react custom hook to fetch previous and next songs' information to integrate playing them. \n <span style='color: var(--primaryClr)'>After fetching playlist information,</span> the custom hook will find current song information and then find the next and the previous songs' information. Once these song data are prepared, return them to where the custom hook is beign called.",
+            difficultPart: "<span style='color: var(--primaryClr)'>There was not really a hard part,</span> but I had to create a react custom hook to fetch previous and next songs' information to integrate playing them. \n <span style='color: var(--primaryClr)'>After fetching playlist information,</span> the custom hook will find current song information and then find the next and the previous songs' information. Once these songs' data are prepared, return them to where the custom hook is being called.",
             other: "",
             prevPortfolio: { pid: "concentrationApp", pname: "Concentration" },
             nextPortfolio: { pid: "chatApp", pname: "React Chat App" },
