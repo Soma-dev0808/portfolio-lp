@@ -115,7 +115,7 @@ const portfolioData: PortfolioData = {
             portfolioTitle: "Spotify App",
             portfolioDesc: "<span style='color: var(--primaryClr)'>Spotify clone application</span> in which you can actually play songs. Once you connect and login to Spotify, this application fetches playlists and songs from third-party Spotify api for you. \n This application is created with Next.js and Tailwind css.",
             portfolioId: "spotifyApp",
-            portfolioLiveAppLink: "https://spotify-clone-lqvvronck-soma-dev0808.vercel.app/",
+            portfolioLiveAppLink: "https://spotify-clone-gold-five.vercel.app/",
             portfolioGitLink: "https://github.com/Soma-dev0808/spotify-clone",
             portfolioGifPath: "/assets/portfolioGif/spotify_app.gif",
             portfolioImgPath: "/assets/portfolioImg/spotifyLike.png",
@@ -133,7 +133,7 @@ const portfolioData: PortfolioData = {
                 "Used Tailwindcss which helps us to develop UI faster."
             ],
             difficultPart: "<span style='color: var(--primaryClr)'>There was not really a hard part,</span> but I had to create a react custom hook to fetch previous and next songs' information to integrate playing them. \n <span style='color: var(--primaryClr)'>After fetching playlist information,</span> the custom hook will find current song information and then find the next and the previous songs' information. Once these songs' data are prepared, return them to where the custom hook is being called.",
-            other: "",
+            other: "You need <span style='color: var(--primaryClr)'>a premium account for spotify</span> to test the demo application. \n If you don't have it, you can also check the demo link below. \n\n <a href='https://user-images.githubusercontent.com/55787141/204393044-587d9ea4-b13c-483f-9012-f716845d40dd.mp4' target='_blank' rel='noreferrer'><span style='color: var(--primaryClr)'>Demo Video Link</span></a>",
             prevPortfolio: { pid: "concentrationApp", pname: "Concentration" },
             nextPortfolio: { pid: "chatApp", pname: "React Chat App" },
         }
