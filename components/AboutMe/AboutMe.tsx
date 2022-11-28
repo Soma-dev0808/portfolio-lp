@@ -26,10 +26,10 @@ const AboutMe = () => {
 
           {/* ここに自分の自己紹介を入れる */}
           <p className={`${aboutMeStyles.myDescription} ${descCls}`}>
-            Hi, I am Soma Ikeda. In 4 years of experience as web developer in
-            Japan and Philippines, I have developed many applications for web
+            Hi, I am Soma Ikeda. With 4 years of experience as a web developer in
+            Japan and the Philippines, I have developed many applications for web
             and mobile. I am passionate about creating SPA(Single Page Application) with React.js and
-            Redux. Also have some experiences with Backend and Mobile
+            Redux. I also have some experience with Backend and Mobile
             development.
           </p>
           {/* <p className={`${aboutMeStyles.myDescription} ${descCls}`}>
