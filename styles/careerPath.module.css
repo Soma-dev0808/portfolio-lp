@@ -1,47 +1,211 @@
-  .steps {
-    position: relative;
-    margin-top: 40px;
-  }
+.steps {
+  position: relative;
+  margin-top: 40px;
+}
 
+.steps::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: var(--primaryClr);
+  opacity: 0.4;
+  top: -35px;
+  bottom: 0;
+  left: 50%;
+}
+
+.stepsContainer {
+  display: flex;
+  position: relative;
+  background-color: inherit;
+  width: calc(50% + 32px);
+}
+
+.stepsContainer .content {
+  position: relative;
+  color: var(--dfltTxtClr);
+  font-size: 16px;
+  padding: 10px 22px 25px;
+  background-color: var(--dfltCardClr);
+  border-radius: var(--dfltBrdrRadius);
+}
+
+.stepsContainer .content::after {
+  border: 2px solid var(--primaryClr);
+  top: 50px;
+  left: 25px;
+  z-index: -1;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 92%;
+  border-radius: var(--dfltBrdrRadius);
+  transition: 0.5s;
+}
+
+.stepsContainerFocus .content::after {
+  height: 95%;
+}
+
+.seeMoreButton {
+  position: absolute;
+  z-index: 99;
+  bottom: 10px;
+  right: 10px;
+  width: var(--buttonSm);
+  border-color: var(--dfltTxtClr);
+  background: linear-gradient(
+      to left,
+      var(--dfltBgClr) 50%,
+      var(--dfltTxtClr) 50%
+    )
+    right;
+  background-size: 200% 100%;
+  padding: var(--buttonSmPadding);
+  box-shadow: none;
+}
+
+.steps .stepsContainer:nth-child(even) {
+  left: calc(50% - 32px);
+  flex-direction: row-reverse;
+}
+
+.stepsContainer .content h3 {
+  font-weight: 600;
+  color: var(--whiteClr);
+}
+
+.stepsContainer .content .companyInfo {
+  color: var(--whiteClr);
+}
+
+.stepsContainer .content .companyName {
+  font-weight: 600;
+  color: var(--primaryClr);
+}
+
+.steps .stepsContainer .date {
+  font-weight: 900;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  width: 62px;
+  height: 62px;
+  background-color: var(--dfltTxtClr);
+  border-radius: 50%;
+  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 777;
+  transition: 0.5s;
+}
+
+.steps .stepsContainerFocus .date {
+  background-color: var(--primaryClr);
+}
+
+.stepLine {
+  width: 40px;
+  background-color: var(--primaryClr);
+  height: 1px;
+  margin-top: 31px;
+  opacity: 0.4;
+  flex-shrink: 0;
+}
+
+.workDetailList {
+  list-style: none;
+  padding-inline-start: 0;
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.5s linear, color 0.5s;
+  margin-bottom: 0;
+}
+
+.workDetailList::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  z-index: 99;
+  transition: 0.5s;
+  background: -webkit-linear-gradient(top, #ffffff00 0%, #112240 60%);
+  background: linear-gradient(to bottom, #ffffff00 0%, #112240 60%);
+}
+
+.contentFocus .workDetailList {
+  color: var(--whiteClr);
+  margin-bottom: 16px;
+}
+
+.contentFocus .workDetailList::before {
+  opacity: 0;
+}
+
+.workDetailList li::before {
+  content: "⇒";
+  position: absolute;
+  left: 0px;
+  color: var(--primaryClr);
+}
+
+.workDetailListItem {
+  position: relative;
+  line-height: 1.5;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+@media (max-width: 767.98px) {
   .steps::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    background-color: var(--primaryClr);
-    opacity: 0.4;
-    top: -35px;
-    bottom: 0;
-    left: 50%;
+    left: 32px;
   }
 
   .stepsContainer {
-    display: flex;
-    position: relative;
-    background-color: inherit;
-    width: calc(50% + 32px);
+    left: 0;
+    flex-direction: row-reverse;
+    width: auto;
+    margin-bottom: 16px;
   }
 
   .stepsContainer .content {
-    position: relative;
-    color: var(--dfltTxtClr);
-    font-size: 16px;
-    padding: 10px 22px 25px;
-    background-color: var(--dfltCardClr);
-    border-radius: var(--dfltBrdrRadius);
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+
+  .workDetailListItem {
+    font-size: 13px;
+  }
+
+  .steps .stepsContainer:nth-child(even) {
+    left: 0;
+  }
+
+  .stepsContainerFocus .content::after {
+    height: 90%;
+  }
+}
+
+/* Small devices */
+@media screen and (max-width: 575.98px) {
+  .portfolio {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .stepsContainer .content {
+    padding: 10px 22px 30px;
   }
 
   .stepsContainer .content::after {
-    border: 2px solid var(--primaryClr);
-    top: 50px;
-    left: 25px;
-    z-index: -1;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 92%;
-    border-radius: var(--dfltBrdrRadius);
-    transition: 0.7s;
+    top: 44px;
+    left: 9px;
   }
 
   .stepsContainerFocus .content::after {
@@ -49,177 +213,12 @@
   }
 
   .seeMoreButton {
-    position: absolute;
-    z-index: 99;
-    bottom: 10px;
-    right: 10px;
+    font-size: var(--buttonSmTxtResp);
     width: var(--buttonSm);
-    border-color: var(--dfltTxtClr);
-    background: linear-gradient(to left, var(--dfltBgClr) 50%, var(--dfltTxtClr) 50%) right;
-    background-size: 200% 100%;
-    padding: var(--buttonSmPadding);
-    box-shadow: none;
-  }
-
-  .steps .stepsContainer:nth-child(even) {
-    left: calc(50% - 32px);
-    flex-direction: row-reverse;
-  }
-
-  .stepsContainer .content h3 {
-    font-weight: 600;
-    color: var(--whiteClr);
-  }
-
-  .stepsContainer .content .companyInfo {
-    color: var(--whiteClr);
-  }
-
-  .stepsContainer .content .companyName {
-    font-weight: 600;
-    color: var(--primaryClr);
-  }
-
-  .steps .stepsContainer .date {
-    font-weight: 900;
-    font-size: 16px;
-    color: #ffffff;
-    margin-bottom: 10px;
-    width: 62px;
-    height: 62px;
-    background-color: var(--dfltTxtClr);
-    border-radius: 50%;
-    flex-shrink: 0;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    z-index: 777;
-    transition: 0.5s;
-  }
-
-  .steps .stepsContainerFocus .date {
-    background-color: var(--primaryClr);
+    padding: var(--buttonSmPaddingResp);
   }
 
   .stepLine {
-    width: 40px;
-    background-color: var(--primaryClr);
-    height: 1px;
-    margin-top: 31px;
-    opacity: 0.4;
-    flex-shrink: 0;
+    width: 10px;
   }
-
-  .workDetailList {
-    list-style: none;
-    padding-inline-start: 0;
-    max-height: 150px;
-    overflow: hidden;
-    transition: max-height 0.7s, color 0.7s;
-    margin-bottom: 0;
-  }
-
-  .workDetailList::before {
-    content: '';
-    bottom: 0;
-    left: 0;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    z-index: 99;
-    transition: 0.7s;
-    background: -webkit-linear-gradient(top,
-        #ffffff00 0%,
-        #112240 60%);
-    background: linear-gradient(to bottom,
-        #ffffff00 0%,
-        #112240 60%);
-  }
-
-  .contentFocus .workDetailList {
-    color: var(--whiteClr);
-    max-height: 1000px;
-    margin-bottom: 16px;
-  }
-
-  .contentFocus .workDetailList::before {
-    opacity: 0;
-  }
-
-  .workDetailList li::before {
-    content: "⇒";
-    position: absolute;
-    left: 0px;
-    color: var(--primaryClr);
-  }
-
-  .workDetailListItem {
-    position: relative;
-    line-height: 1.5;
-    padding-left: 30px;
-    margin-bottom: 10px;
-    font-size: 15px;
-  }
-
-  @media (max-width: 767.98px) {
-    .steps::after {
-      left: 32px;
-    }
-
-    .stepsContainer {
-      left: 0;
-      flex-direction: row-reverse;
-      width: auto;
-      margin-bottom: 16px;
-    }
-
-    .stepsContainer .content {
-      padding: 10px 10px;
-      font-size: 13px;
-    }
-
-    .workDetailListItem {
-      font-size: 13px;
-    }
-
-    .steps .stepsContainer:nth-child(even) {
-      left: 0;
-    }
-
-    .stepsContainerFocus .content::after {
-      height: 90%;
-    }
-  }
-
-  /* Small devices */
-  @media screen and (max-width: 575.98px) {
-    .portfolio {
-      flex-direction: column;
-      padding: 0px;
-    }
-
-    .stepsContainer .content {
-      padding: 10px 22px 30px;
-    }
-
-    .stepsContainer .content::after {
-      top: 44px;
-      left: 9px;
-    }
-
-    .stepsContainerFocus .content::after {
-      height: 95%;
-    }
-
-    .seeMoreButton {
-      font-size: var(--buttonSmTxtResp);
-      width: var(--buttonSm);
-      padding: var(--buttonSmPaddingResp);
-    }
-
-    .stepLine {
-      width: 10px;
-    }
-
-  }
+}
